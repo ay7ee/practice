@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -79,16 +80,11 @@ public class UserService implements UserDetailsService {
         return appUserRepository.enableAppUser(email);
     }
 
-    public String getUserData(){
+    public Long getUserId(){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (!(authentication instanceof AnonymousAuthenticationToken)) {
             String currentUserName = authentication.getName();
             Long user_id = appUserRepository.getUserIdByEmail(currentUserName);
-            return "Current user id:" + user_id +
-                    "Email: " + currentUserName +
-                    "Role: " + authentication.getAuthorities();
-        }
-        return "not found";
+            return user_id;
     }
 
     public void updateUser(String email){
@@ -97,5 +93,9 @@ public class UserService implements UserDetailsService {
 
     public List<User> findAllByEmail(String email){
        return appUserRepository.findAllByEmailLikeIgnoreCase(email);
+    }
+
+    public Optional<User> getUserById(Long userid) {
+        return appUserRepository.getUserByUserid(userid);
     }
 }

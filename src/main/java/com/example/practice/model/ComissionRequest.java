@@ -24,4 +24,5 @@ public class ComissionRequest {
 
     @Enumerated(EnumType.STRING)
     private Status_comission_request status_comission_request;
+
 }

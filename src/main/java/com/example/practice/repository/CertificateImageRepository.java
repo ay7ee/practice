@@ -13,4 +13,6 @@ public interface CertificateImageRepository extends JpaRepository<CertificateIma
     @Transactional
     @Query("select i from CertificateImage i where i.certificateid = ?1")
     CertificateImage findByCertificateID(Long id);
+
+    CertificateImage findByCertificateid(Long id);
 }

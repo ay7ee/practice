@@ -14,9 +14,9 @@ public class ComissionRequestController {
     private ComissionRequestService service;
 
     @PostMapping("/create")
-    public String create(@RequestBody ComissionRequest cr){
+    public String create(@RequestParam Long requestid){
         try {
-             service.save(cr);
+             service.save(requestid);
              return "Created";
         }
         catch (Exception e){

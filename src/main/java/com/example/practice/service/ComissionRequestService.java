@@ -13,8 +13,10 @@ public class ComissionRequestService {
     @Autowired
     private ComissionRequestRepo comissionRequestRepo;
 
-    public void save(ComissionRequest comissionRequest){
+    public void save(Long id){
+        ComissionRequest comissionRequest = new ComissionRequest();
         comissionRequest.setStatus_comission_request(Status_comission_request.PENDING);
+        comissionRequest.setRequestid(id);
         comissionRequestRepo.save(comissionRequest);
     }
 

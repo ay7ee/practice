@@ -31,7 +31,7 @@ public class CertificateImageController {
         }
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/certificate/{id}")
     @ResponseBody
     void showImage(@PathVariable("id") Long id, HttpServletResponse response, CertificateImage product)
             throws ServletException, IOException {

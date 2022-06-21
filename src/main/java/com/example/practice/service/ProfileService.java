@@ -21,4 +21,8 @@ public class ProfileService {
     public Optional<Profile> getById(Long id){
         return profileRepository.findById(id);
     }
+
+    public Optional<Profile> getByUserid(Long id){
+        return profileRepository.getByUserid(id);
+    }
 }

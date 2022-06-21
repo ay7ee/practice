@@ -19,12 +19,12 @@ public class CertificateImageService {
     private CertificateImageRepository certificateImageRepository;
 
 
-    public CertificateImage store(MultipartFile file, Long certificateid) throws IOException {
+    public void store(MultipartFile file, Long certificateid) throws IOException {
         CertificateImage certificateImage = new CertificateImage("Certificate", file.getContentType(), file.getBytes(), certificateid);
-        return certificateImageRepository.save(certificateImage);
+        certificateImageRepository.save(certificateImage);
     }
 
     public CertificateImage getFile(Long id) {
-        return certificateImageRepository.findByCertificateID(id);
+        return certificateImageRepository.findByCertificateid(id);
     }
 }

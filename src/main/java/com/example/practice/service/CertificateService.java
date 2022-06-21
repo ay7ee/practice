@@ -22,4 +22,7 @@ public class CertificateService {
         return certificateRepository.findById(id);
     }
 
+    public Optional<Certificate> getCertificateByUserId(Long id) {
+        return certificateRepository.findByUserid(id);
+    }
 }

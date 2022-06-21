@@ -38,4 +38,6 @@ public interface AppUserRepository extends JpaRepository<User, Long> {
 
     @Query("SELECT u from User u WHERE u.email like %?1%")
     List<User> findAllByEmailLikeIgnoreCase(String email);
+
+    Optional<User> getUserByUserid(Long userid);
 }

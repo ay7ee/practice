@@ -31,4 +31,9 @@ public class ProfileController {
     public Optional<Profile> getOneUser(@PathVariable(value = "id") Long id){
         return profileService.getById(id);
     }
+
+    @GetMapping("/user/{id}")
+    public Optional<Profile> getByUsersId(@PathVariable(value = "id") Long id){
+        return profileService.getByUserid(id);
+    }
 }

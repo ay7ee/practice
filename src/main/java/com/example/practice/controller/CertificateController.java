@@ -24,4 +24,9 @@ public class CertificateController {
     public Optional<Certificate> getCertificate(@PathVariable(value = "id") Long id){
         return certificateService.getCertificate(id);
     }
+
+    @GetMapping("/user/{id}")
+    public Optional<Certificate> getCertificateByUserID(@PathVariable(value = "id") Long id){
+        return certificateService.getCertificateByUserId(id);
+    }
 }

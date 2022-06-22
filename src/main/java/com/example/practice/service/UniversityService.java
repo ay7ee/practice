@@ -19,10 +19,14 @@ public class UniversityService {
     }
 
     public List<University> getUniversities(){
-        return universityRepository.findAll();
+        return universityRepository.getAll();
     }
 
     public Optional<University> getUniversistyById(Long universityid){
-        return universityRepository.findById(universityid);
+        return universityRepository.getUniversity(universityid);
+    }
+
+    public Optional<University> getUniversistyByName(String name) {
+        return universityRepository.getUniversityByName(name);
     }
 }

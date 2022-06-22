@@ -32,4 +32,14 @@ public class University {
     @NotNull
     private User user;
     private Long userid;
+
+    public University(Long universityid, String address, String code, String fullname, String name,  String url, Long userid) {
+        this.universityid = universityid;
+        this.fullname = fullname;
+        this.name = name;
+        this.code = code;
+        this.address = address;
+        this.url = url;
+        this.userid = userid;
+    }
 }

@@ -22,4 +22,12 @@ public class Program {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "universityid")
     private University university;
+    private Long universityid;
+
+    public Program(Long programid, String name, String code, Long universityid) {
+        this.programid = programid;
+        this.name = name;
+        this.code = code;
+        this.universityid = universityid;
+    }
 }

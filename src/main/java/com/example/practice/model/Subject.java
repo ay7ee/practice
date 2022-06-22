@@ -23,7 +23,12 @@ public class Subject {
     @ManyToOne
     @JoinColumn(name = "programid", insertable = false, updatable = false)
     private Program program;
-
     private Long programid;
 
+    public Subject(Long subjectid, String name, int credit, Long programid) {
+        this.subjectid = subjectid;
+        this.name = name;
+        this.credit = credit;
+        this.programid = programid;
+    }
 }

@@ -2,7 +2,7 @@ package com.example.practice.service;
 
 
 import com.example.practice.model.ComissionRequest;
-import com.example.practice.model.Status_comission_request;
+import com.example.practice.model.enums.Status_comission_request;
 import com.example.practice.repository.ComissionRequestRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

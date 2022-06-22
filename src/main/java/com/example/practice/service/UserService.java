@@ -1,12 +1,11 @@
 package com.example.practice.service;
 
-import com.example.practice.model.Role;
+import com.example.practice.model.enums.Role;
 import com.example.practice.model.User;
 import com.example.practice.registration.registration.token.ConfirmationToken;
 import com.example.practice.registration.registration.token.ConfirmationTokenService;
 import com.example.practice.repository.AppUserRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;

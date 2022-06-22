@@ -20,7 +20,7 @@ public class Program {
     private String code;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "universityid")
+    @JoinColumn(name = "universityid", insertable = false, updatable = false)
     private University university;
     private Long universityid;
 
@@ -29,5 +29,13 @@ public class Program {
         this.name = name;
         this.code = code;
         this.universityid = universityid;
+    }
+    public Program( String name, String code, Long universityid) {
+        this.name = name;
+        this.code = code;
+        this.universityid = universityid;
+    }
+
+    public Program() {
     }
 }

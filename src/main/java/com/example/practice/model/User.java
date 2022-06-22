@@ -1,5 +1,6 @@
 package com.example.practice.model;
 
+import com.example.practice.model.enums.Role;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

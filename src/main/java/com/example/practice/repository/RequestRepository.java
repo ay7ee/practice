@@ -1,7 +1,7 @@
 package com.example.practice.repository;
 
 import com.example.practice.model.Request;
-import com.example.practice.model.Status_request;
+import com.example.practice.model.enums.Status_request;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

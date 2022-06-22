@@ -3,12 +3,14 @@ package com.example.practice.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.sun.istack.NotNull;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 
 @JsonIgnoreProperties({"hibernateLazyInitializer"})
 @Getter
+@NoArgsConstructor
 @Setter
 @Entity
 @Table(name = "university")

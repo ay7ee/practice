@@ -43,16 +43,15 @@ public class ProgramController {
                 if(programService.existsById(d)){
                     programService.deleteById(d);
                 }
-
             }
             return ResponseEntity.ok().body("Program has been removed");
 
         }
 
-    @PutMapping("/update/{id}")
-    public void updateProgram(@RequestBody Program program, @PathVariable Long id){
-        programService.updateById(program, id);
-    }
+//    @PostMapping("/update/{id}")
+//    public void updateProgram(@RequestBody Program program, @PathVariable Long id){
+//        programService.updateById(program, id);
+//    }
 
     @GetMapping("/all")
     public List<Program> getAllProgram(){

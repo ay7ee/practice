@@ -1,7 +1,7 @@
 package com.example.practice.service;
 
 import com.example.practice.model.Request;
-import com.example.practice.model.Status_request;
+import com.example.practice.model.enums.Status_request;
 import com.example.practice.repository.RequestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

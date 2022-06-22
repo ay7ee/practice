@@ -1,8 +1,6 @@
 package com.example.practice.controller;
 
 
-import com.example.practice.model.Role;
-import com.example.practice.model.University;
 import com.example.practice.model.User;
 import com.example.practice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,5 +1,6 @@
 package com.example.practice.model;
 
+import com.example.practice.model.enums.Status_request;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;

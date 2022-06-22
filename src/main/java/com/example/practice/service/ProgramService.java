@@ -33,14 +33,9 @@ public class ProgramService {
        return programRepository.existsByProgramid(id);
     }
 
-    public void updateById(Program program, Long id) {
-       if(programRepository.findById(id).isPresent()){
-           Program oldProgram = programRepository.findById(id).get();
-           oldProgram.setCode(program.getCode());
-           oldProgram.setName(program.getName());
-           programRepository.save(oldProgram);
-       }
-    }
+//    public void updateById(Program program, Long id) {
+//          programRepository.update()
+//    }
 
     public List<Program> getAll(){
         return programRepository.findAll();

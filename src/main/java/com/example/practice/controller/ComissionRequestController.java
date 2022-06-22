@@ -1,8 +1,7 @@
 package com.example.practice.controller;
 
 
-import com.example.practice.model.ComissionRequest;
-import com.example.practice.model.Status_comission_request;
+import com.example.practice.model.enums.Status_comission_request;
 import com.example.practice.service.ComissionRequestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

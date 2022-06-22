@@ -1,6 +1,6 @@
 package com.example.practice.registration.registration;
 
-import com.example.practice.model.Role;
+import com.example.practice.model.enums.Role;
 import com.example.practice.model.User;
 import com.example.practice.service.UserService;
 import com.example.practice.registration.email.EmailSender;

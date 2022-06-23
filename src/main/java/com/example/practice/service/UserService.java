@@ -94,6 +94,10 @@ public class UserService implements UserDetailsService {
        return appUserRepository.findAllByEmailLikeIgnoreCase(email);
     }
 
+    public Long findidByEmail(String email){
+        return appUserRepository.getUserIdByEmail(email);
+    }
+
     public Optional<User> getUserById(Long userid) {
         return appUserRepository.getUserByUserid(userid);
     }

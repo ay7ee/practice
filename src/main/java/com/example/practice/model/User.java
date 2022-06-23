@@ -12,6 +12,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -42,6 +44,9 @@ public class User implements UserDetails {
     private Boolean locked = false;
     private Boolean enabled = false;
 
+//    @ManyToMany(mappedBy = "users")
+//    private Set<ComissionRequest> comissionRequests;
+//
 
     public User(String name,
                 String surname,

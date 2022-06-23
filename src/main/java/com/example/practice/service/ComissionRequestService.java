@@ -7,6 +7,8 @@ import com.example.practice.repository.ComissionRequestRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class ComissionRequestService {
 
@@ -23,4 +25,8 @@ public class ComissionRequestService {
     public void update(Status_comission_request status, Long id){
       comissionRequestRepo.updateStatus(status, id);
     }
+
+//    public Optional<ComissionRequest> findOne(Long id){
+//        return comissionRequestRepo.findById(id);
+//    }
 }

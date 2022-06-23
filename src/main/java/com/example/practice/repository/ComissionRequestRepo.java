@@ -16,7 +16,7 @@ public interface ComissionRequestRepo extends JpaRepository<ComissionRequest, Lo
 
     @Transactional
     @Modifying
-    @Query("update ComissionRequest r set r.status_comission_request = :status where r.comissionRequestId = :id")
+    @Query("update ComissionRequest r set r.status_comission_request = :status where r.comissionRequestid = :id")
     void updateStatus(@Param("status") Status_comission_request status, @Param("id") Long id);
 
 }

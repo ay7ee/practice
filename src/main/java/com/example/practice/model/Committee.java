@@ -19,13 +19,13 @@ public class Committee {
     private Long userid;
 
     @ManyToOne
-    @JoinColumn(name = "comissionRequestid", insertable = false, updatable = false)
-    private ComissionRequest comissionRequest;
-    private Long comissionRequestid;
+    @JoinColumn(name = "requestid", insertable = false, updatable = false)
+    private Request request;
+    private Long requestid;
 
-    public Committee(Long committeeid, Long comissionRequestid, Long userid) {
+    public Committee(Long committeeid, Long requestid, Long userid) {
         this.committeeid = committeeid;
-        this.comissionRequestid = comissionRequestid;
+        this.requestid = requestid;
         this.userid = userid;
     }
 

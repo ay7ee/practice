@@ -20,13 +20,10 @@ public class CommiteeController {
 
 
     @GetMapping("/create")
-    public String create(@RequestParam(name="comission_requestid") Long comission_requestid, @RequestParam(name = "email") String email){
+    public String create(@RequestParam(name="requestid") Long requestid, @RequestParam(name = "email") String email){
         try {
-            Committee committee = new Committee();
             Long userid = userService.findidByEmail(email);
-            committee.setComissionRequestid(comission_requestid);
-            committee.setUserid(userid);
-            service.save(committee);
+            service.save(requestid, userid);
             return "Created";
         }catch (Exception e){
             return e.getMessage();
@@ -39,8 +36,8 @@ public class CommiteeController {
         return service.getByUserId(id);
     }
 
-    @GetMapping("/comReq/{id}")
-    public List<Committee> getByComReqId(@PathVariable Long id){
+    @GetMapping("/request/{id}")
+    public List<Committee> getByReqId(@PathVariable Long id){
         return service.getByRequestId(id);
     }
 }

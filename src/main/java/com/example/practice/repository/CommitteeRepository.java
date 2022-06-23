@@ -10,10 +10,11 @@ import java.util.List;
 @Repository
 public interface CommitteeRepository extends JpaRepository<Committee, Long> {
 
-    @Query("Select new com.example.practice.model.Committee(c.committeeid, c.comissionRequestid, c.userid) FROM Committee c where c.userid = ?1")
+    @Query("Select new com.example.practice.model.Committee(c.committeeid, c.requestid, c.userid) FROM Committee c where c.userid = ?1")
     List<Committee> findAllByUserid(Long id);
 
 
-    @Query("Select new com.example.practice.model.Committee(c.committeeid, c.comissionRequestid, c.userid) FROM Committee c where c.comissionRequestid = ?1")
-    List<Committee> findAllByComissionRequestid(Long id);
+    @Query("Select new com.example.practice.model.Committee(c.committeeid, c.requestid, c.userid) FROM Committee c where c.requestid = ?1")
+    List<Committee> findAllByRequestid(Long id);
+    Long countCommitteeByRequestid( Long requestid );
 }

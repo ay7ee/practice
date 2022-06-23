@@ -16,5 +16,7 @@ public interface CommitteeRepository extends JpaRepository<Committee, Long> {
 
     @Query("Select new com.example.practice.model.Committee(c.committeeid, c.requestid, c.userid) FROM Committee c where c.requestid = ?1")
     List<Committee> findAllByRequestid(Long id);
+
+    @Query("SELECT COUNT(d.requestid) FROM Committee d WHERE d.requestid = ?1 ")
     Long countCommitteeByRequestid( Long requestid );
 }

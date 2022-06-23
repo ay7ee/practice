@@ -1,34 +1,38 @@
 package com.example.practice.model;
 
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-@Setter
+
 @Getter
+@Setter
 @Entity
-@Table(name = "decision")
+@Table(name = "decisions")
 public class Decision {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long decisionid;
-    private boolean check;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private int decisionid;
+
+    private Boolean checks;
 
     @ManyToOne
     @JoinColumn(name = "subjectid", insertable = false, updatable = false)
     private Subject subject;
+
     private Long subjectid;
 
     @ManyToOne
     @JoinColumn(name = "requestid", insertable = false, updatable = false)
     private Request request;
+
     private Long requestid;
 
     @ManyToOne
     @JoinColumn(name = "userid" , insertable = false, updatable = false)
     private User user;
-    private Long userid;
 
+    private Long userid;
 }

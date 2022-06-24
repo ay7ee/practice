@@ -32,4 +32,8 @@ public class Committee {
     public Committee() {
 
     }
+
+    public Committee(Long requestid) {
+        this.requestid = requestid;
+    }
 }

@@ -23,7 +23,7 @@ public class CommiteeController {
     public String create(@RequestParam(name="requestid") Long requestid, @RequestParam(name = "email") String email){
         try {
             Long userid = userService.findidByEmail(email);
-            service.save(requestid, userid);
+            service.save(requestid, userid, email);
             return "Created";
         }catch (Exception e){
             return e.getMessage();

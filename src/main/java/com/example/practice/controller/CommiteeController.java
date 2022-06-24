@@ -19,8 +19,8 @@ public class CommiteeController {
     private UserService userService;
 
 
-    @PostMapping("/create")
-    public String create(@RequestParam(name="requestid") Long requestid, @RequestParam(name = "email") String email){
+    @GetMapping("/create")
+    public String create(@RequestParam(name = "requestid") Long requestid, @RequestParam(name = "email") String email){
         try {
             Long userid = userService.findidByEmail(email);
             service.save(requestid, userid, email);

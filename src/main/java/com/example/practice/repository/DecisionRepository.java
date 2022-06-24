@@ -11,4 +11,9 @@ import java.util.List;
 public interface DecisionRepository extends JpaRepository<Decision, Long> {
     @Query("SELECT COUNT(DISTINCT d.userid) FROM Decision d WHERE d.requestid = ?1 ")
     Long checkIfFinished( Long id );
+
+
+    @Query("SELECT COUNT(d.subjectid) FROM Decision d WHERE d.subjectid =?1 and d.requestid = ?2 and d.checks = true")
+    Long getResult( Long subjectid, Long requestid );
+
 }

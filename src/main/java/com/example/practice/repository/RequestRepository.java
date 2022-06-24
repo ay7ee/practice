@@ -21,5 +21,6 @@ public interface RequestRepository extends JpaRepository<Request, Long> {
 
     @Query("Select new com.example.practice.model.Request(r.requestid, r.userid, r.universityid, r.certificateid, r.programid,  r.status_request) FROM Request r WHERE r.userid = :id")
     Optional<Request> findAllByUserid(@Param("id")  Long id);
+
 }
 

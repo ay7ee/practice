@@ -27,7 +27,7 @@ public interface ProgramRepository extends JpaRepository<Program, Long> {
     @Transactional
     @Modifying
     @Query("update Program r set r.name = :name, r.code = :code where r.programid = :id")
-    void update(@Param("name") String code, @Param("name") String name, @Param("requestid") Long id);
+    boolean update(@Param("name") String code, @Param("name") String name, @Param("id") Long id);
 
 
 

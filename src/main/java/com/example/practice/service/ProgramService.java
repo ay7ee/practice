@@ -33,9 +33,11 @@ public class ProgramService {
        return programRepository.existsByProgramid(id);
     }
 
-//    public void updateById(Program program, Long id) {
-//          programRepository.update()
-//    }
+    public void updateById(Program program, Long id) {
+        String code = program.getCode();
+        String name = program.getName();
+         programRepository.update(code, name, id);
+    }
 
     public List<Program> getAll(){
         return programRepository.findAll();

@@ -16,8 +16,14 @@ public class CertificateController {
     private CertificateService certificateService;
 
     @PostMapping("/create")
-    public void saveCertificate(@RequestBody Certificate certificate){
-        certificateService.createCertificate(certificate);
+    public String saveCertificate(@RequestBody Certificate certificate){
+        try{
+            certificateService.createCertificate(certificate);
+            return "Created";
+        }catch (Exception e){
+            return e.getMessage();
+        }
+
     }
 
     @GetMapping("/{id}")

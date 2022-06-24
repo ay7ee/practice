@@ -37,21 +37,21 @@ public class ProgramController {
         return this.programService.getProgramsOfUniversity(id);
     }
 
-    @DeleteMapping("/delete/{arrayids}")
-        public ResponseEntity<?> deleteByIds(@PathVariable(name = "arrayids") List<Long> arrayids){
-            for ( Long d : arrayids){
-                if(programService.existsById(d)){
-                    programService.deleteById(d);
-                }
-            }
-            return ResponseEntity.ok().body("Program has been removed");
+//    @DeleteMapping("/delete/{arrayids}")
+//        public ResponseEntity<?> deleteByIds(@PathVariable(name = "arrayids") List<Long> arrayids){
+//            for ( Long d : arrayids){
+//                if(programService.existsById(d)){
+//                    programService.deleteById(d);
+//                }
+//            }
+//            return ResponseEntity.ok().body("Program has been removed");
+//
+//        }
 
-        }
-
-//    @PostMapping("/update/{id}")
-//    public void updateProgram(@RequestBody Program program, @PathVariable Long id){
-//        programService.updateById(program, id);
-//    }
+    @PostMapping("/update/{id}")
+    public void updateProgram(@RequestBody Program program, @PathVariable Long id){
+        programService.updateById(program, id);
+    }
 
     @GetMapping("/all")
     public List<Program> getAllProgram(){

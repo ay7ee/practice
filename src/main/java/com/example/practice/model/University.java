@@ -29,7 +29,7 @@ public class University {
 
 
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "userid", insertable = false, updatable = false)
     @NotNull
     private User user;

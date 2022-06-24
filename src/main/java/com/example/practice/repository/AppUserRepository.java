@@ -39,4 +39,6 @@ public interface AppUserRepository extends JpaRepository<User, Long> {
     List<User> findAllByEmailLikeIgnoreCase(String email);
 
     Optional<User> getUserByUserid(Long userid);
+
+
 }

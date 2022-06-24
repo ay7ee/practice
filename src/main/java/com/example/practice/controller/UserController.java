@@ -1,6 +1,8 @@
 package com.example.practice.controller;
 
 
+import com.example.practice.model.Committee;
+import com.example.practice.model.Request;
 import com.example.practice.model.User;
 import com.example.practice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,5 +40,10 @@ public class UserController {
     @GetMapping("/{email}")
     public List<User> findUser(@PathVariable String email){
         return userService.findAllByEmail(email);
+    }
+
+    @GetMapping("/committee/{id}")
+    public List<Request> myCommission(@PathVariable Long id){
+        return userService.myCommittee(id);
     }
 }

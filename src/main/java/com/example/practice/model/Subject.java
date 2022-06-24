@@ -31,4 +31,7 @@ public class Subject {
         this.credit = credit;
         this.programid = programid;
     }
+
+    public Subject() {
+    }
 }

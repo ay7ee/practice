@@ -37,14 +37,9 @@ public class SubjectController {
         return subjectService.getSubject(id);
     }
 
-    @DeleteMapping("/delete/{arrayids}")
-    public ResponseEntity<?> deleteByIds(@PathVariable(name = "arrayids") List<Long> arrayids){
-        for ( Long d : arrayids){
-            if(subjectService.existsById(d)){
-                subjectService.deleteById(d);
-            }
-
-        }
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> deleteByid(@PathVariable(name = "id") Long id){
+                subjectService.deleteById(id);
         return ResponseEntity.ok().body("Subject has been removed");
 
     }

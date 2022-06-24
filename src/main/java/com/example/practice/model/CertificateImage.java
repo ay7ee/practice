@@ -38,6 +38,13 @@ public class CertificateImage {
     }
 
     public CertificateImage() {
+    }
 
+    public byte[] getCertificate_image() {
+        return certificate_image;
+    }
+
+    public String getType() {
+        return type;
     }
 }

@@ -18,7 +18,7 @@ public class Decision {
 
     private Boolean checks;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "subjectid", insertable = false, updatable = false)
     private Subject subject;
 

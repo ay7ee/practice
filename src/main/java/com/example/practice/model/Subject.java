@@ -32,4 +32,6 @@ public class Subject {
         this.programid = programid;
     }
 
+    public Subject() {
+    }
 }

@@ -33,4 +33,6 @@ public class DecisionController {
         return service.getResultOfVoting(id);
     }
 
+
+
 }

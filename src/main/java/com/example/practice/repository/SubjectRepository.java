@@ -15,6 +15,7 @@ import java.util.Optional;
 public interface SubjectRepository extends JpaRepository<Subject, Long>{
     Optional<Subject> findBySubjectid(Long id);
 
+    @Transactional
     String deleteBySubjectid(Long subjectid);
 
     boolean existsBySubjectid(Long id);
@@ -23,9 +24,11 @@ public interface SubjectRepository extends JpaRepository<Subject, Long>{
     @Query("Select new com.example.practice.model.Subject(p.subjectid, p.name, p.credit, p.programid) from Subject p WHERE p.programid = ?1")
     List<Subject> getByProgram(Long programid);
 
+    @Transactional
     @Query("select p.subjectid from Subject p WHERE p.programid = ?1")
     List<Long> getIds(Long programid);
 
+    @Transactional
     @Query( "select new com.example.practice.model.Subject(o.subjectid, o.name, o.credit, o.programid) from Subject o where o.subjectid in :ids" )
     List<Subject> findBySubjectids(@Param("ids") List<Long> subjectids);
 }

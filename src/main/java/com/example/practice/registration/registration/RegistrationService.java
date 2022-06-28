@@ -41,7 +41,7 @@ public class RegistrationService {
                 )
         );
 
-        String link = "http://10.1.11.249:8090/api/v1/registration/confirm?token=" + token;
+        String link = "http://10.1.11.249:9091/api/v1/registration/confirm?token=" + token;
         emailSender.send(
                 request.getEmail(),
                 buildEmail(request.getName(), link));

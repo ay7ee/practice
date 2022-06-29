@@ -37,7 +37,7 @@ public class UniversityController {
         return this.universityService.getUniversistyById(universityid);
     }
 
-    @GetMapping("/{name}")
+    @GetMapping("/byName{name}")
     public Optional<University> getUniversityByName(@PathVariable(value = "name") String name){
         return this.universityService.getUniversistyByName(name);
     }

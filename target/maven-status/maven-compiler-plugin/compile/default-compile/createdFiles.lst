@@ -36,7 +36,6 @@ com\example\practice\controller\UniversityController.class
 com\example\practice\controller\RegistrationController.class
 com\example\practice\repository\CertificateImageRepository.class
 com\example\practice\service\UniversityService.class
-com\example\practice\config\WebConfig.class
 com\example\practice\registration\registration\token\ConfirmationTokenRepository.class
 com\example\practice\controller\RequestController.class
 com\example\practice\registration\security\config\WebSecurityConfig.class

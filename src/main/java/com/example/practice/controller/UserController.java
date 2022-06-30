@@ -1,7 +1,6 @@
 package com.example.practice.controller;
 
 
-import com.example.practice.model.Committee;
 import com.example.practice.model.Request;
 import com.example.practice.model.User;
 import com.example.practice.service.UserService;

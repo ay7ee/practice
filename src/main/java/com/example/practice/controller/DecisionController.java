@@ -7,7 +7,6 @@ import com.example.practice.service.DecisionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.security.PermitAll;
 import java.util.List;
 
 @RestController

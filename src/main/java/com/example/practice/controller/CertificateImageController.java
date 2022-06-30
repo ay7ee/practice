@@ -2,7 +2,6 @@ package com.example.practice.controller;
 
 
 import com.example.practice.model.CertificateImage;
-import com.example.practice.model.Image;
 import com.example.practice.service.CertificateImageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

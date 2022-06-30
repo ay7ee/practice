@@ -16,8 +16,8 @@ public interface ImageRepository extends JpaRepository<Image, String> {
     Optional<Image> findByIdAndType(Long userid, String type);
 
     @Transactional
-    @Query("SELECT i FROM Image i WHERE i.userid = ?1 AND i.date = " +
-            "(SELECT MAX(i2.date) FROM Image i2 WHERE i2.type = ?2)")
+    @Query("SELECT i FROM Image i WHERE i.type = ?2 AND i.date = " +
+            "(SELECT MAX(i2.date) FROM Image i2 WHERE i2.userid = ?1)")
     Optional<Image> findLastImageByUserIdAndType(Long userid, String type);
 
 }

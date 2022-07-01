@@ -1,6 +1,7 @@
 C:\Users\arsen\Desktop\practice\src\main\java\com\example\practice\registration\email\EmailSender.java
 C:\Users\arsen\Desktop\practice\src\main\java\com\example\practice\model\Committee.java
 C:\Users\arsen\Desktop\practice\src\main\java\com\example\practice\repository\RequestRepository.java
+C:\Users\arsen\Desktop\practice\src\main\java\com\example\practice\registration\security\config\SimpleCORSFilter.java
 C:\Users\arsen\Desktop\practice\src\main\java\com\example\practice\registration\registration\RegistrationRequest.java
 C:\Users\arsen\Desktop\practice\src\main\java\com\example\practice\dto\LoginDto.java
 C:\Users\arsen\Desktop\practice\src\main\java\com\example\practice\service\SubjectService.java

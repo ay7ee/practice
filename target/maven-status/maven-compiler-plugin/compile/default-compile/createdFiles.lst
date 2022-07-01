@@ -1,6 +1,5 @@
 com\example\practice\repository\ProfileRepository.class
 com\example\practice\model\CertificateImage.class
-com\example\practice\registration\security\config\WebSecurityConfig$1.class
 com\example\practice\model\Profile.class
 com\example\practice\repository\CertificateRepository.class
 com\example\practice\repository\ImageRepository.class
@@ -32,6 +31,7 @@ com\example\practice\service\ImageService.class
 com\example\practice\model\enums\Role.class
 com\example\practice\controller\DecisionController.class
 com\example\practice\service\ProfileService.class
+com\example\practice\registration\security\config\SimpleCORSFilter.class
 com\example\practice\repository\AppUserRepository.class
 com\example\practice\controller\UniversityController.class
 com\example\practice\controller\RegistrationController.class

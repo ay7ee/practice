@@ -1,5 +1,6 @@
 com\example\practice\repository\ProfileRepository.class
 com\example\practice\model\CertificateImage.class
+com\example\practice\registration\security\config\WebSecurityConfig$1.class
 com\example\practice\model\Profile.class
 com\example\practice\repository\CertificateRepository.class
 com\example\practice\repository\ImageRepository.class
